@@ -1,4 +1,6 @@
-from student.student import Student, get_student_with_more_classes
+from student.student import Student
+# from student import Student, get_student_with_more_classes
+
 
 def test_init():
     name = "Ada Lovelace"
@@ -40,5 +42,7 @@ def test_get_student_with_more_classes():
         "sophomore",
         ["mathematics", "foundations of computing"]
     )
-
+    # act
+    student_n = charles.get_student_with_more_classes(charles, ada)
     # TODO: write assertions
+    assert student_n == ada
